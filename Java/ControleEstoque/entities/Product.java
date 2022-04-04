@@ -6,28 +6,28 @@ public class Product {
     private String model;
     private String color;
     private String obs;
+	private String size;
     private Double price;
-    private int quantity;
+	private int quantity;
 
-    public Product() {
-    }
-
-    public Product(String name, String brand, String model, String color, String obs, Double price, int quantity) {
+	public Product(String name, String brand, String model, String color, String obs, String size, Double price, int quantity) {
 		this.name = name;
         this.brand = brand;
         this.model = model;
         this.color = color;
 		this.obs = obs;
+		this.size = size;
 		this.price = price;
 		this.quantity = quantity;
 	}
 	
-	public Product(String name, String brand, String model, String color, String obs, Double price) {
+	public Product(String name, String brand, String model, String color, String obs, String size, Double price) {
 		this.name = name;
         this.brand = brand;
         this.model = model;
         this.color = color;
 		this.obs = obs;
+		this.size = size;
 		this.price = price;
 	}
 
@@ -70,6 +70,14 @@ public class Product {
 	public String getObs() {
 		return obs;
 	}
+
+    public void setSize (String size) {
+		this.size = size;
+	}
+	
+	public String getSize() {
+		return size;
+	}
 	
 	public void setPrice (double price) {
 		this.price = price;
@@ -94,4 +102,13 @@ public class Product {
 	public void removeProducts(int quantity) {
 		this.quantity -= quantity;
 	}
+
+	public String toString() {
+		return "Product: " + name + "\n" + 
+        "Brand: " + brand + " | Model: " + model  + " | Tamanho: " + size +
+		" | Color: " + color + "\n" + "Obs: " + obs 
+        + "\n" + "Price: $ " + String.format("%.2f", price) + " | Quantity: " + quantity + 
+		" | Total Value: $ " + String.format("%.2f", totalValueInStock());
+	}
+	
 }
