@@ -104,11 +104,11 @@ public class Product {
 	}
 
 	public String toString() {
-		return "Product: " + name + "\n" + 
-        "Brand: " + brand + " | Model: " + model  + " | Tamanho: " + size +
-		" | Color: " + color + "\n" + "Obs: " + obs 
-        + "\n" + "Price: $ " + String.format("%.2f", price) + " | Quantity: " + quantity + 
-		" | Total Value: $ " + String.format("%.2f", totalValueInStock());
+		return "Produto: " + name + "\n" + 
+        "Marca: " + brand + " | Modelo: " + model  + " | Tamanho: " + size +
+		" | Cor: " + color + "\n" + "Obs: " + obs 
+        + "\n" + "Preço: $ " + String.format("%.2f", price) + " | Quantity: " + quantity + 
+		" | Valor total no estoque: $ " + String.format("%.2f", totalValueInStock());
 	}
 	
 }

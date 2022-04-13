@@ -40,7 +40,7 @@ public class Program{
 
 			sc.nextLine();
 			System.out.println();
-			System.out.print("Deseja adicionar algum item? (S/N) ");
+			System.out.print("Deseja adicionar algum(a) " + product.getName() + "? (S/N) ");
 			String opc = sc.nextLine();
 
 			switch (opc) {
@@ -75,7 +75,7 @@ public class Program{
 
 			sc.nextLine();
 			System.out.println();
-			System.out.print("Deseja remover algum item? (S/N) ");
+			System.out.print("Deseja remover algum(a) " + product.getName() + "? (S/N) ");
 			String opc2 = sc.nextLine();
 
 			switch (opc2) {
